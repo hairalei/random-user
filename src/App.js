@@ -56,8 +56,7 @@ function App() {
   }, []);
 
   const handleValue = (e) => {
-    console.log(e.target.matches("button"));
-    if (e.target.matches("button")) {
+    if (e.target.matches("button") && !loading) {
       let newTitle = e.target.dataset.label;
       setTitle(newTitle);
       setValue(person[newTitle]);
